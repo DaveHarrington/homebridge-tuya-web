@@ -39,6 +39,8 @@ export class BrightnessCharacteristic extends TuyaWebCharacteristic {
   public get rangeMapper(): MapRange {
     let minTuya = 10;
     let maxTuya = 100;
+    this.debug("HERE!!!!");
+    this.debug(`${this.accessory.deviceConfig}`);
     if (
       this.accessory.deviceConfig.config?.min_brightness !== undefined &&
       this.accessory.deviceConfig.config?.max_brightness !== undefined
